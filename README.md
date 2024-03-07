@@ -30,9 +30,18 @@ All applications run locally, and the database is hosted on AWS instances, allow
 Cross-Site Scripting (XSS) is a security vulnerability that enables the injection of client-side scripts into web pages. Attackers can use this to make the website execute undesired code. For example:
 
 ```html
-<script>window.location.href="http://malicious.domain"</script> ```html
+<script>window.location.href="http://malicious.domain"</script>
+```
 you are unwantedlly redirect to malicious domain.
+
 
 ### SQLi (SQL Injection)
 SQL Injection is a code injection technique which executes malicious SQL statements against a relational database."
+
+| Page | Field | Value | Outcome |
+| -------- | -------- | -------- | -------- |
+| admin   | username   | ' OR ''='   | Receive information of all existing users in the system   |
+| signup   | username  | user' SELECT userPasswords FROM USERS where userName='admin'   | Retrieve admin password  |
+| login   | username  | usera' DROP TABLE users   | Delete full table of all users |
+
 
