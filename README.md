@@ -23,6 +23,8 @@ This project showcases security vulnerabilities related to Cross-Site Scripting 
 
 All applications run locally, and the database is hosted on AWS instances, allowing remote control and handling change requests to the database.
 
+- .env file - configuration file
+
 ## Vulnerability Explanation
 
 ### XSS (Cross-Site Scripting)
