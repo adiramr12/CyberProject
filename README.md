@@ -42,8 +42,8 @@ SQL Injection is a code injection technique which executes malicious SQL stateme
 
 | Page | Field | Value | Outcome |
 | -------- | -------- | -------- | -------- |
-| admin   | username   | ' OR ''='   | Receive information of all existing users in the system   |
-| signup   | username  |'adirtestt'; SELECT * FROM users where userName = 'admin';   | Retrieve admin password  |
+| admin   | username   | '';SELECT * FROM users WHERE userName =''  OR ''='' | Receive information of all existing users in the system   |
+| signup   | username  |'adirtestt'; SELECT * FROM users where userName = 'admin'  | Retrieve admin password  |
 | login   | username  | 'usera'; DROP TABLE SQLDELETE;   | Delete full table of all users |
 
 
